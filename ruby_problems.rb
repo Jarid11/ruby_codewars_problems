@@ -36,7 +36,7 @@ end
 
 # return count of sheep
 
-def countSheeps arr
+def countSheeps arr 
   count = 0
   arr.each { |sheep|
     sheep == true && count += 1
