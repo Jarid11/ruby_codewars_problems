@@ -21,3 +21,15 @@ end
 def greet(name)
   name == "Johnny" ? "Hello, my love!" : "Hello, #{name}!"
 end
+
+# return smallest number in array
+
+def find_smallest_int(arr)
+  lowNum = nil
+  arr.each { |num|
+    if num < lowNum.to_i ||lowNum.to_i == 0
+     lowNum = num
+    end
+  }
+  return lowNum
+end
