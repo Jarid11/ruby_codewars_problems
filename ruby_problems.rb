@@ -33,3 +33,13 @@ def find_smallest_int(arr)
   }
   return lowNum
 end
+
+# return count of sheep
+
+def countSheeps arr
+  count = 0
+  arr.each { |sheep|
+    sheep == true && count += 1
+  }
+  count
+end
