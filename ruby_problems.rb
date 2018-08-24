@@ -16,3 +16,8 @@ def repeat_str n, s
   s * n
 end
 
+# debug function problem
+
+def greet(name)
+  name == "Johnny" ? "Hello, my love!" : "Hello, #{name}!"
+end
