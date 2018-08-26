@@ -43,3 +43,9 @@ def countSheeps arr
   }
   count
 end
+
+# return middle char or chars of string
+
+def get_middle(s)
+  s.length.even? ? s[s.length/2 - 1]  + s[s.length/2] : s[s.length/2]
+end
