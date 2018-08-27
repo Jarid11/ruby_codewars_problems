@@ -49,3 +49,19 @@ end
 def get_middle(s)
   s.length.even? ? s[s.length/2 - 1]  + s[s.length/2] : s[s.length/2]
 end
+
+# given a string multiple each letter by its index + 1, capitalize the first letter, lower case the rest and seperate each letter with a "-"
+
+def accum(s)
+  newArr = []
+  i = 1
+	s.split('').each { |let|
+    let *= i
+    i += 1     
+    newArr.push(let.downcase)
+  }
+  newArr.each { |let|
+    let[0] = let[0].upcase
+  }
+  return newArr.join("-")
+end
