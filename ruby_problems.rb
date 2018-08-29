@@ -66,4 +66,10 @@ def accum(s)
   return newArr.join("-")
 end
 
-#test 
+class String
+  def toJadenCase(str)
+    arr = str.split(" ")
+    arr.each { |word| word[0] = word[0].upcase }
+    arr.join(" ")
+  end
+end
