@@ -66,10 +66,21 @@ def accum(s)
   return newArr.join("-")
 end
 
+#jaden case a given string
+
 class String
   def toJadenCase(str)
     arr = str.split(" ")
     arr.each { |word| word[0] = word[0].upcase }
     arr.join(" ")
   end
+end
+
+#return highest and smallest number in a string seperated by a space
+
+def high_and_low(numbers)
+  arr = numbers.split(' ')
+  newArr = []
+  arr.each { |num| newArr.push(num.to_i) }
+  "#{newArr.max.to_s} #{newArr.min.to_s}"
 end
