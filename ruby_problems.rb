@@ -94,3 +94,12 @@ def square_digits num
   newArr.join('').to_i
 end
 
+def XO(str)
+  x = 0
+  o = 0
+  arr = str.split('').map { |let| 
+    x += 1 if let.downcase == "x"
+    o += 1 if let.downcase == "o"
+  }
+  x == o ? true : false
+end
