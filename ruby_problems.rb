@@ -103,3 +103,9 @@ def XO(str)
   }
   x == o ? true : false
 end
+
+# given a string of numbers return the highest possible number as a number
+
+def descending_order(n)
+  n.to_s.split('').sort().reverse().join('').to_i
+end
