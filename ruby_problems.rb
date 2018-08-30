@@ -109,3 +109,10 @@ end
 def descending_order(n)
   n.to_s.split('').sort().reverse().join('').to_i
 end
+
+# given a number determine if it is a perfect square, return true or false
+
+def is_square(x)
+  return false if x < 0 
+  Math.sqrt(x) % 1 == 0 ? true : false
+end
