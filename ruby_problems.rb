@@ -84,3 +84,13 @@ def high_and_low(numbers)
   arr.each { |num| newArr.push(num.to_i) }
   "#{newArr.max.to_s} #{newArr.min.to_s}"
 end
+
+# given a string that is a number square each number and return the new number
+
+def square_digits num
+  arr = num.to_s.split('')
+  newArr = []
+  arr.each { |n| newArr.push(n.to_i * n.to_i)}
+  newArr.join('').to_i
+end
+
