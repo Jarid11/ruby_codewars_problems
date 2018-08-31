@@ -116,3 +116,21 @@ def is_square(x)
   return false if x < 0 
   Math.sqrt(x) % 1 == 0 ? true : false
 end
+
+# given a number return the digital root (if num > 10, split it and sum nums)
+
+def digital_root(n)
+  arr = n.to_s.split('')
+  if arr.length != 1
+   tot = arr.inject(0){|sum,x| sum.to_i + x.to_i }
+     while (tot >= 10)
+       tot = tot.to_s.split('').inject(0){|sum,x| sum.to_i + x.to_i }
+     end
+  else 
+   return arr[0].to_i
+  end
+  return tot
+ end
+ 
+ # shorter refactor version using recursion
+ n < 10 ? n : digital_root(n /10 + n % 10)
