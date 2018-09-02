@@ -166,3 +166,15 @@ def pig_it text
   }
   newArr.join(" ")
 end
+
+# given a string return the length of the shortest word 
+
+def find_short(s)
+  l = 0
+  s.split(' ').each {|word|
+    if l == 0 || word.length < l
+      l = word.length
+    end
+  }
+  return l
+end
