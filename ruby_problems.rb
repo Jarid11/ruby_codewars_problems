@@ -140,3 +140,9 @@ def digital_root(n)
 def array_diff(a, b)
   [a - b]
 end
+
+# create a valid phone number given an array of numbers
+
+def createPhoneNumber(n)
+  "(#{n[0]}#{n[1]}#{n[2]}) #{n[3]}#{n[4]}#{n[5]}-#{n[6]}#{n[7]}#{n[8]}#{n[9]}"
+end
