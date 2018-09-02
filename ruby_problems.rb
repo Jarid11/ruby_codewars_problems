@@ -197,3 +197,25 @@ def reverse_words(str)
     return str.reverse
   end
 end
+
+# return the index of the unique number(even or odd) in the string
+
+def iq_test(numbers)
+  arr = numbers.split(" ")
+  e = 0
+  o = 0
+  i = 0
+  arr.each {|num|
+    num.to_i.even? ? e += 1 : o += 1
+  }
+  e > o ?
+    arr.map {|n| 
+    return i + 1 if arr[i].to_i.odd? 
+    i += 1
+    }
+  :
+    arr.map {|n|
+    return i + 1 if arr[i].to_i.even? 
+    i +=1 
+    }
+end
