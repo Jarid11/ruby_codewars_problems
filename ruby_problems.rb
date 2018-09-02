@@ -134,3 +134,9 @@ def digital_root(n)
  
  # shorter refactor version using recursion
  n < 10 ? n : digital_root(n /10 + n % 10)
+
+#  return the difference of two arrays
+
+def array_diff(a, b)
+  [a - b]
+end
