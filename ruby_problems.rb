@@ -178,3 +178,22 @@ def find_short(s)
   }
   return l
 end
+
+# given a string reverse each word in it and keep double spaces if provided
+
+def reverse_words(str)
+  newArr = []
+  if str.include?("  ")
+    str.split("  ").each {|word|
+      newArr.push(word.reverse)
+    }
+    return newArr.join('  ')
+  elsif str.include?(" ")
+    str.split(" ").each {|word|
+      newArr.push(word.reverse)
+    }
+    return newArr.join(' ')
+  else
+    return str.reverse
+  end
+end
