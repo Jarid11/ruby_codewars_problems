@@ -146,3 +146,23 @@ end
 def createPhoneNumber(n)
   "(#{n[0]}#{n[1]}#{n[2]}) #{n[3]}#{n[4]}#{n[5]}-#{n[6]}#{n[7]}#{n[8]}#{n[9]}"
 end
+
+# given a string return the piglatin version of the string
+
+def pig_it text
+  arr = text.split(' ')
+  newArr = []
+  puts arr.inspect
+  arr.each {|word|
+    if word != "!" && word != "?"
+    word += word[0] + "ay"
+    word[0] = ''
+    newArr.push(word)
+    else 
+    word += word[0]
+    word[0] = ''
+    newArr.push(word)
+    end
+  }
+  newArr.join(" ")
+end
