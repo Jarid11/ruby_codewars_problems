@@ -219,3 +219,13 @@ def iq_test(numbers)
     i +=1 
     }
 end
+
+# count the amount of sheep and return the amount of sheep that didnt return
+
+def lost_sheep(friday,saturday,total)
+  count = friday + saturday
+  return total if count.length == 0
+  sheep = count.inject { |sum, tot| sum += tot}
+  total - sheep
+end
+
