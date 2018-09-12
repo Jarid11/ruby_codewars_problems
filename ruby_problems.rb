@@ -229,3 +229,12 @@ def lost_sheep(friday,saturday,total)
   total - sheep
 end
 
+#return a reversed string but no not include any symbols or numbers
+
+def reverse_letter(string)
+  noNumArr = []
+  string.split('').each { |char|
+   noNumArr.push(char) if char =~ /[A-Za-z]/
+  }
+  noNumArr.reverse.join
+end
