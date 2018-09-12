@@ -238,3 +238,20 @@ def reverse_letter(string)
   }
   noNumArr.reverse.join
 end
+
+# given a number return a pyramid of arrays based on how big the number is
+
+def pyramid(numbers)
+  newArr = []
+  return newArr if numbers == 0
+  count = 1
+  numbers.times {
+    innerArrs = []
+    count.times {
+      innerArrs.push(1)
+    }
+    newArr.push(innerArrs)
+    count += 1
+  }
+  return newArr
+end
