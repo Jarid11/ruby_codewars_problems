@@ -287,3 +287,13 @@ def duplicate_count(text)
   arr = text.downcase.split('')
   return arr.select{|e| arr.count(e) > 1}.uniq.length
 end
+
+# return a string saying who liked the post differently based on how many ppl comment
+
+def likes(names)
+  return 'no one likes this' if names == []
+  return "#{names[0]} likes this"if names.length == 1
+  return "#{names[0]} and #{names[1]} like this"if names.length == 2
+  return "#{names[0]}, #{names[1]} and #{names[2]} like this"if names.length == 3
+  return "#{names[0]}, #{names[1]} and #{names.length - 2} others like this"if names.length > 3
+end
