@@ -255,3 +255,27 @@ def pyramid(numbers)
   }
   return newArr
 end
+
+# return unique order not including duplicates
+
+def unique_in_order(str)
+  return [] if "" == str
+  newArr = []
+  arr = str.split('') if str =~ /[A-Za-z]/
+  i = 0
+  (str =~ /[A-Za-z]/) ? (
+    arr.each { |char|
+      if !newArr.include?(char) || arr[i] != arr[i - 1]
+        newArr.push(char)
+      end
+      i += 1
+    })
+  : (
+    str.each { |char|
+      if !newArr.include?(char)
+        newArr.push(char)
+      end
+      i += 1
+    })
+  newArr
+end
