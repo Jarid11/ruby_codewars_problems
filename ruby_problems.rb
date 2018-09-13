@@ -279,3 +279,11 @@ def unique_in_order(str)
     })
   newArr
 end
+
+# return the number amount of duplicated letters in a string including both cases
+
+def duplicate_count(text)
+  return 0 if text == ""
+  arr = text.downcase.split('')
+  return arr.select{|e| arr.count(e) > 1}.uniq.length
+end
