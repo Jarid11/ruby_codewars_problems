@@ -297,3 +297,18 @@ def likes(names)
   return "#{names[0]}, #{names[1]} and #{names[2]} like this"if names.length == 3
   return "#{names[0]}, #{names[1]} and #{names.length - 2} others like this"if names.length > 3
 end
+
+# write a fn that takes in a number, multiple all the digits of the number until the product is one digit.
+# return the count of the amount of multiplications it takes
+
+def persistence(n, count = 0)
+  return count if n < 10
+  i = 0
+  arr = n.to_s.split('')
+  if arr.length > 1
+    tot = arr.map(&:to_i).inject(:*)
+    i += 1
+    count += 1
+    tot.to_i >= 10 ? persistence(tot.to_i, count) : count
+  end
+end
